@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var location = [
+    let location = [
         "Mexico City",
         "New York City",
         "Los Angeles",
@@ -20,7 +20,7 @@ struct ContentView: View {
         "Montreal"
     ]
     
-    @State var food = [
+    let food = [
         "Sweet potato fries",
         "Nachos",
         "Grilled salmon salad",
@@ -31,7 +31,7 @@ struct ContentView: View {
         "Potato leek soup"
     ]
     
-    @State var time = [
+    let time = [
         "5 pm",
         "6 pm",
         "7 pm",
@@ -86,13 +86,13 @@ struct ContentView: View {
             }
             
             Button ("Pick for me!"){
-                
+                locationSelectedIndex = .random(in: 0..<location.count)
+                foodSelectedIndex = .random(in: 0..<food.count)
+                timeSelectedIndex = .random(in: 0..<time.count)
             }
             
         }
-        
-        
-
+        .padding()
     }
 }
 
