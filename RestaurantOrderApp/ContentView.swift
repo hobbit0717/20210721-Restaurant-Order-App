@@ -43,6 +43,7 @@ struct ContentView: View {
     @State var foodSelectedIndex = 0
     @State var timeSelectedIndex = 0
     
+    
     var body: some View {
         
         VStack(spacing:80) {
